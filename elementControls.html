@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Element Control</title>
+  <style>
+    p {
+      background: yellow;
+      margin: 2px;
+      padding: 2px;
+    }
+
+    div {
+      border: 2px solid blue;
+      margin: 2px;
+      padding: 2px;
+    }
+
+    strong {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <p>I would i like to say</p>
+  <span>Span Text</span>
+  <strong>What about me?</strong>
+  <span>Another One</span>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    $('p').append("<strong>Hello</strong>");
+    $('p').after("<b>Hello</b>");
+    $('span').wrap("<div><div><p><em><b></b></em></p></div></div>")
+  </script>
+</body>
+</html>
