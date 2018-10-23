@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" id="pure" value="pure" />
+  <input type="button" id="jquery" value="jquery" />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script>
+    var target = document.getElementById('pure');
+    if (target.addEventListener) {
+      target.addEventListener('click', function(event) {
+        alert('pure');
+      });
+    } else {
+      target.attachEvent('onclick', function(event) {
+        alert('pure');
+      });
+    }
+
+    // jQuery
+    $('#jquery').on('click', function(event) {
+      alert('jQuery');
+    })
+  </script>
+</body>
+</html>
